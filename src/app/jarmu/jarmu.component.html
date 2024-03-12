@@ -1,0 +1,45 @@
+<div class="addForm">
+    <div class="input">
+        <label for="rendszam" class="form-label">Rendszám</label>
+        <input type="text" id="rendszám" class="form-control"
+        [(ngModel)]="rendszam">
+    </div>
+</div>
+
+<div class="addForm">
+    <div class="input">
+        <label for="marka" class="form-label">Márka</label>
+        <input type="text" id="marka" class="form-control"
+        [(ngModel)]="marka">
+    </div>
+</div>
+
+<div class="addForm">
+    <div class="input">
+        <label for="ar" class="form-label">Ár</label>
+        <input type="text" id="ar" class="form-control"
+        [(ngModel)]="ar">
+    </div>
+    <div>
+        <button (click)="addVehicle()" class= "btn btn-primary mt-2" title="Mentés">Mentés</button>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Rendszám</th>
+            <th>Márka</th>
+            <th>Ár</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+        <td>{{vehicle.id}}</td>
+        <td>{{vehicle.rendszam}}</td>
+        <td>{{vehicle.marka}}</td>
+        <td>{{vehicle.ar}}</td>
+        </tr>
+    </tbody>
+</table>
